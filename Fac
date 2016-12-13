@@ -1,0 +1,18 @@
+public class Fac{
+    
+    public static void main(String[] args){
+        System.out.println(fac (Integer.parseInt(args[0])));
+    }    
+	
+	private static int fac (int num)
+	{
+	    int result = num ; 
+	    while(num>1){
+		
+		   result *= --num;
+		
+		}
+		   
+		return result;
+	}
+}
