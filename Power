@@ -1,0 +1,15 @@
+public class Power{
+    
+    public static void main(String[] args){
+        System.out.println(pow (Integer.parseInt(args[0]), Integer.parseInt(args[1])));
+    }    
+	
+	private static int pow (int num, int p)
+	{
+	    int result = num ; 
+	    for(int i = 0; i< p; i ++)
+           result *=num;
+		   
+		return result;
+	}
+}
