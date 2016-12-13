@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class Arr{
+    
+    public static void main(String[] args){
+	    int[] arr = generate();
+           
+		for (int i = 0; i < arr.length; i++) System.out.println(arr[i]);
+    }    
+	
+	private static int[] generate ()
+	{
+	    Random r = new Random();
+	    int[] result = new int[100] ; 
+	       for (int i = 0; i < 100; i++)
+		   {
+			    result[i]=r.nextInt();
+		   }
+           for (int i = 0; i < result.length; i++) {
+               int min = result[i];
+               int min_i = i; 
+           for (int j = i+1; j < result.length; j++) {
+                if (result[j] < min) {
+                min = result[j];
+                min_i = j;
+            }
+        }
+          if (i != min_i) {
+            int tmp = result[i];
+           result[i] = result[min_i];
+            result[min_i] = tmp;
+            }
+        }
+		return result;
+}
+	
+	
+  
+}
+
+	    
